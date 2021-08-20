@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Приложение о погоде</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+<div>
+     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">Главная</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Информация</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Документация</a></li>
+          </ul>
+
+          <div class="col-md-4 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">Логин</button>
+            <button type="button" class="btn btn-primary">Регистрация</button>
+          </div>
+        </header>
+        <div class="container">
+            <h3>Приложение о погоде</h3>
+            <div class="col-4 offset-1">
+                <form action="">
+                    <label for="city">Город</label>
+                    <input type="text" id="city" class="form-control" name="city"
+                           placeholder="Введите город">
+                    <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-danger">
+                </form>
+            </div>
+
+            <div class="col-4 offset-1">
+                <h3>Информация</h3>
+                <div class="alert alert-light">
+                    Погода в Минске
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</body>
+</html>
+
+{#style="display: flex; flex-direction: column; align-items: center;justify-content: center"#}
