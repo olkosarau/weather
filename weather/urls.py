@@ -3,6 +3,6 @@ from weather.views import index
 
 
 urlpatterns = [
-    path('weather/', index),
+    path('', index),
 
 ]

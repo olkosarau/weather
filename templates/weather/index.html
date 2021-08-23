@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<div>
+    <div>
      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
@@ -27,22 +27,28 @@
         <div class="container">
             <h3>Приложение о погоде</h3>
             <div class="col-4 offset-1">
-                <form action="">
+                <form action=" " method="post">
+                    {% csrf_token %}
                     <label for="city">Город</label>
-                    <input type="text" id="city" class="form-control" name="city"
-                           placeholder="Введите город">
+                    {{ form.name }}
+
                     <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-danger">
                 </form>
             </div>
 
             <div class="col-4 offset-1">
                 <h3>Информация</h3>
-                <div class="alert alert-light">
-                    Погода в Минске
-                </div>
+                {% for info in all_info%}
+                <img class="alert alert-danger">
+                    <b>Город:</b>{{ info.city }}<br>
+                    <b>Температура:</b>{{ info.temp }}<sup>o</sup><br>
+                    <img src="https://api.openweathermap.org/img/w/{{ info.icon }}.png" alt="Фото погоды" class="img-thumbnail">
             </div>
         </div>
-</div>
+                {% endfor %}
+
+        </div>
+    </div>
 
 
 </body>
