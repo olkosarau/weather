@@ -23,6 +23,7 @@ def index(request):
             'temp': res['main']['temp'],
             'icon': res['weather'][0]['icon'],
         }
+
         all_city.append(city_info)
 
     res_info = {'all_info': all_city, 'form': form}
